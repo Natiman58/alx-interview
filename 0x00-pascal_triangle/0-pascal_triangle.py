@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+    A python function that generates pascal's triangle in array format
+"""
+
 def pascal_triangle(n):
     if n <= 0:
         return []
