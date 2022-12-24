@@ -3,6 +3,7 @@
     A python function that generates pascal's triangle in array format
 """
 
+
 def pascal_triangle(n):
     """
         A function to generate pascal's triangle
@@ -17,8 +18,6 @@ def pascal_triangle(n):
         row = [0] * (i + 1)
         row[0] = 1
         row[len(row) - 1] = 1
-        
-        
         for j in range(1, i):
             """ For the middle values add the prev row 2 sebsequent columns"""
             if j > 0 and j < len(row):
@@ -29,14 +28,3 @@ def pascal_triangle(n):
         pascal_triangle[i] = row
 
     return pascal_triangle
-        
-
-
-
-        
-
-
-
-
-
-
