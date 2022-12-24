@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
     A python function that generates pascal's triangle in array format
 """
