@@ -1,19 +1,35 @@
-"""
-    A function that returns a list of integers representing the pascal's triangle
-"""
-
+#!/usr/bin/python3
 def pascal_triangle(n):
-    """ generate the pascal's triangle"""
-    x = []
     if n <= 0:
-        return x
-    else:
-        for i in range(n+1):
-            for j in range(n-i):
-                print(' ', end='')
+        return []
 
-        C = 1
-        for j in range(1, i+1):
-             print(C, ' ', sep='', end='')
-             C = C * (i - j) // j
-        print()
+    pascal_triangle = [0] * n
+
+    for i in range(n):
+        """ Define each row and set the first and last element to 1"""
+        row = [0] * (i + 1)
+        row[0] = 1
+        row[len(row) - 1] = 1
+        
+        
+        for j in range(1, i):
+            """ For the middle values add the prev row 2 sebsequent columns"""
+            if j > 0 and j < len(row):
+                a = pascal_triangle[i - 1][j]
+                b = pascal_triangle[i - 1][j - 1]
+                row[j] = a + b
+
+        pascal_triangle[i] = row
+
+    return pascal_triangle
+        
+
+
+
+        
+
+
+
+
+
+
