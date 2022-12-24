@@ -4,6 +4,9 @@
 """
 
 def pascal_triangle(n):
+    """
+        A function to generate pascal's triangle
+    """
     if n <= 0:
         return []
 
