@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+    A method that checks if all the boxes can be unlocked.
+"""
 def canUnlockAll(boxes):
     keys = [0]
     """ loop through boxes array and
