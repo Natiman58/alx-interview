@@ -13,6 +13,7 @@
 # scan the line for time, status code, file size
 
 import sys
+from typing import Callable, Any 
 
 line_counter = 0
 total_file_size = 0
@@ -20,7 +21,7 @@ stat_code_dict = {"200": 0, "301": 0, "400": 0, "401": 0,
                   "403": 0, "404": 0, "405": 0, "500": 0}
 
 
-def output(stat_code_dict, total_file_size):
+def output(stat_code_dict: Any, total_file_size: int) -> Callable:
     """Prints to the standard output"""
     print("File size: {}".format(total_file_size))
     for k, v in sorted(stat_code_dict.items()):
