@@ -19,7 +19,6 @@ line_counter = 0
 total_file_size = 0
 stat_code_dict = {"200": 0, "301": 0, "400": 0, "401": 0,
                   "403": 0, "404": 0, "405": 0, "500": 0}
-code = 0
 
 
 def output(stat_code_dict, total_file_size):
