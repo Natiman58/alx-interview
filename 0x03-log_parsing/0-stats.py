@@ -22,7 +22,7 @@ stat_code_dict = {"200": 0, "301": 0, "400": 0, "401": 0,
                   "403": 0, "404": 0, "405": 0, "500": 0}
 
 
-def output(stat_code_dict: Union[str, int], total_file_size: int) -> str:
+def output(stat_code_dict: Union[str, int], total_file_size: int) -> None:
     """Prints to the standard output"""
     print("File size: {}".format(total_file_size))
     for k, v in sorted(stat_code_dict.items()):
