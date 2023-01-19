@@ -39,7 +39,7 @@ try:
         file_size = int(line.split(" ")[-1].rstrip())
         parsed_line = line.split()
 
-        if len(parsed_line) != 0:
+        if len(parsed_line) > 2:
             line_counter += 1
 
             if line_counter <= 10:
