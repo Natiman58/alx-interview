@@ -6,7 +6,6 @@
 
     201.67.113.164 - [2023-01-19 19:24:28.419400]\
         "GET /projects/260 HTTP/1.1" 200 510
-
     if not input format skip line
 
 """
@@ -14,7 +13,6 @@
 # scan the line for time, status code, file size
 
 import sys
-from typing import Union
 
 line_counter = 0
 total_file_size = 0
