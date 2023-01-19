@@ -32,8 +32,8 @@ def output(stat_code_dict, total_file_size):
 
 try:
     for line in sys.stdin:
-        if 'Exit' == line.rstrip():
-            break
+        if not line:
+            pass
         # time = line.split(" ")[2].split("[")[1]
         status_code = line.split(" ")[-2]
         file_size = int(line.split(" ")[-1].rstrip())
