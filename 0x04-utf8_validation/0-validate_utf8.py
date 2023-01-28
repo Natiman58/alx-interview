@@ -10,33 +10,10 @@
 # 1 integer = 1 byte = 8 bits
 # Eg: 65 = 0b 0100 0001
 
-
-''' def validUTF8(data):
-    """
-        checks if data is valid UTF-8
-        returns boolean
-
-    num_bytes = 0
-    for i in data:
-        if num_bytes == 0:
-            if i >> 5 == 0b110: # 6
-                num_bytes = 1
-            elif i >> 4 == 0b1110: # 14
-                num_bytes = 2
-            elif i >> 3 == 0b11110: # 30
-                num_bytes = 3
-            elif i >> 7 == 0b1: # 1
-                return False
-        else:
-            if i >> 6 != 0b10: # 2
-                return False
-            num_bytes -= 1
-    return num_bytes == 0 '''
-
-
 def validUTF8(data):
     """
     checks if data is valid UTF-8
+    return the number of byte
     """
     n_bytes = 0
 
