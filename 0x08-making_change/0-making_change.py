@@ -20,13 +20,14 @@ def makeChange(coins: List[int], total: int) -> int:
     # set the first value 0
     min_coin[0] = 0
 
-    # then start from the second coin val
-    for i in range(1, total + 1):
-        for coin in coins:  # iterate through each coin
-            if coin <= i:  # if each coin is < total
-                # get the min amount by checking the current & prev coin val
-                min_amount_coin = min(min_coin[i], min_coin[i - coin] + 1)
-                # update the min coin list
-                min_coin[i] = min_amount_coin
+    # Iterate through each coin and update the min_coin array
+    for coin in coins:
+        for i in range(coin, total + 1):
+            if min_coin[i - coin] != float('inf'):
+                min_coin[i] = min(min_coin[i], min_coin[i - coin] + 1)
 
-    return min_coin[total] if min_coin[total] != float('inf') else -1
+    # If it's not possible to make the total with the given coins, return -1
+    if min_coin[total] == float('inf'):
+        return -1
+
+    return min_coin[total]
