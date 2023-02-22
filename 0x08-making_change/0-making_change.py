@@ -2,8 +2,6 @@
 """
     A script that calculates changes of a coin using dynamic programming
 """
-from typing import List, Any
-
 
 def makeChange(coins, total):
     """
