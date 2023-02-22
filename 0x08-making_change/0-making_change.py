@@ -2,10 +2,10 @@
 """
     A script that calculates changes of a coin using dynamic programming
 """
-from typing import List
+from typing import List, Any
 
 
-def makeChange(coins: List[int], total: int) -> int:
+def makeChange(coins: List[int], total: int) -> Any:
     """
         returns the minimun no of coins needed to make the total
         args:
