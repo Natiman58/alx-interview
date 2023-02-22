@@ -3,6 +3,7 @@
     A script that calculates changes of a coin using dynamic programming
 """
 
+
 def makeChange(coins, total):
     """
         returns the minimun no of coins needed to make the total
