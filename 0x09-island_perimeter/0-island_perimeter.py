@@ -2,7 +2,6 @@
 """
     calculate the perimeter of an island
 """
-from typing import List
 
 
 def island_perimeter(grid):
