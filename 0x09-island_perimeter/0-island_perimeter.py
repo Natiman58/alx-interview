@@ -5,7 +5,7 @@
 from typing import List
 
 
-def island_perimeter(grid: List[List]) -> int:
+def island_perimeter(grid):
     """
         grid: collection of islands
         return: their perimeter
