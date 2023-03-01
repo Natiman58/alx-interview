@@ -29,9 +29,9 @@ def island_perimeter(grid):
                 top = grid[i - 1][j]
 
                 # check if there is an island to the left of the current island
-                if j > 0 and left == 1:
+                if left == 1:
                     perimeter -= 2
                 # the check if there is an island on top of the current island
-                if j > 0 and top == 1:
+                if top == 1:
                     perimeter -= 2
     return perimeter
