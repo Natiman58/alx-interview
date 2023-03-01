@@ -21,19 +21,27 @@ def island_perimeter(grid):
                 left = grid[i][j - 1]
                 right = grid[i][j + 1]
 
-                # if the is an island infront of the current island
+                # if there is an island infront of the current island
                 if back == 0 and front == 1 and right == 0 and left == 0:
-                    perimeter -= 2
-                # if there is's between islands(front and back)
-                if back == 1 and front == 1 and right == 0 and left == 0:
+                    #print(perimeter)
                     perimeter += 2
+                    #print(perimeter)
+                # if is's between islands(front and back)
+                elif back == 1 and front == 1 and right == 0 and left == 0:
+                    perimeter -= 2
+                    #print(perimeter)
                 # if there is an island in the back and on the right
-                if back == 1 and front == 0 and right == 1 and left == 0:
+                elif back == 1 and front == 0 and right == 1 and left == 0:
+                    #print(perimeter)
                     perimeter -= 4
+                    #print(perimeter)
+
                 # if there are islands on the back and left
-                if back == 1 and front == 0 and right == 0 and left == 1:
-                    perimeter -= 4
+                elif back == 1 and front == 0 and right == 0 and left == 1:
+                    perimeter += 0
+                    #print(perimeter)
                 # if in betweeen island (left and right)
-                if back == 0 and front == 0 and right == 1 and left == 1:
-                    perimeter -= 4
-    return perimeter
+                elif back == 0 and front == 0 and right == 1 and left == 1:
+                    perimeter -= 0
+                    #print(perimeter)
+    return perimeter - 4
