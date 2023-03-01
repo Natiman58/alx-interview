@@ -20,7 +20,7 @@ def island_perimeter(grid):
     perimeter = 0
     # i -> row , j -> col
     for i in range(len(grid)):
-        for j in range(len(grid[0])):
+        for j in range(1, len(grid[0])):
             # if its a single island increase perimeter by 4
             if grid[i][j] == 1:
                 perimeter += 4
