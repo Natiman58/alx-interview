@@ -6,8 +6,15 @@
 
 def island_perimeter(grid):
     """
-        grid: collection of islands
-        return: their perimeter
+    Calculate the perimeter of an island.
+
+    Args:
+        grid (List[List[int]]): A rectangular grid of integers representing an island.
+            0 represents water and 1 represents land.
+
+    Returns:
+        int: The perimeter of the island.
+
     """
     perimeter = 0
     # i -> row , j -> col
@@ -16,32 +23,14 @@ def island_perimeter(grid):
             # if its a single island increase perimeter by 4
             if grid[i][j] == 1:
                 perimeter += 4
-                back = grid[i - 1][j]
-                front = grid[i + 1][j]
+                # below = grid[i + 1][j] and right = grid[i][j + 1]
                 left = grid[i][j - 1]
-                right = grid[i][j + 1]
+                top = grid[i - 1][j]
 
-                # if there is an island infront of the current island
-                if back == 0 and front == 1 and right == 0 and left == 0:
-                    # print(perimeter)
-                    perimeter += 2
-                    # print(perimeter)
-                # if is's between islands(front and back)
-                elif back == 1 and front == 1 and right == 0 and left == 0:
+                # check if there is an island to the left of the current island
+                if j > 0 and left == 1:
                     perimeter -= 2
-                    # print(perimeter)
-                # if there is an island in the back and on the right
-                elif back == 1 and front == 0 and right == 1 and left == 0:
-                    # print(perimeter)
-                    perimeter -= 4
-                    # print(perimeter)
-
-                # if there are islands on the back and left
-                elif back == 1 and front == 0 and right == 0 and left == 1:
-                    perimeter += 0
-                    # print(perimeter)
-                # if in betweeen island (left and right)
-                elif back == 0 and front == 0 and right == 1 and left == 1:
-                    perimeter -= 0
-                    # print(perimeter)
-    return perimeter - 4
+                # the check if there is an island on top of the current island
+                if j > 0 and top == 1:
+                    perimeter -= 2
+    return perimeter
