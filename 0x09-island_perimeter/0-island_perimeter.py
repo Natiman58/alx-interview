@@ -20,12 +20,16 @@ def island_perimeter(grid):
     height = len(grid)
     width = len(grid[0])
     perimeter = 0
+    # i -> row, j -> col
     for i in range(height):
         for j in range(width):
             top = grid[i - 1][j]
             left = grid[i][j - 1]
+            # if there is an island incresese perimeter by 4
             if grid[i][j] == 1:
                 perimeter += 4
+                # check the adjacent islands(top and left)
+                # and subtract 2(the walls that dont contribute to Perimeterx)
                 if i > 0 and top == 1:
                     perimeter -= 2
                 if j > 0 and left == 1:
