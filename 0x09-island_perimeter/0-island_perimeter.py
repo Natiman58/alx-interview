@@ -24,7 +24,7 @@ def island_perimeter(grid):
             # if its a single island increase perimeter by 4
             if grid[i][j] == 1:
                 perimeter += 4
-                #below = grid[i + 1][j], right = grid[i][j + 1]
+                # below = grid[i + 1][j], right = grid[i][j + 1]
                 left = grid[i][j - 1]
                 top = grid[i - 1][j]
 
