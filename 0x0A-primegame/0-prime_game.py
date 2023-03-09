@@ -1,8 +1,6 @@
-#!/usr/bin/python3
 """
     A script that simulates a game of primes
 """
-
 
 def sieve(n):
     """ return prime numbers arrray 'primes' using
@@ -33,7 +31,7 @@ def remove_multiples(primes, prime):
         return primes
     for i in range(len(primes)):
         if primes[i] % prime == 0:
-            primes[i] = False
+            primes[i] = 0
     return [p for p in primes if p != 0]
 
 
