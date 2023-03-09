@@ -2,7 +2,6 @@
 """
     A script that simulates a game of primes
 """
-import random
 
 
 def sieve(n):
@@ -22,6 +21,7 @@ def choose_prime(primes):
     """
         chooses a prime number randomly
     """
+    import random
     return random.choice(primes)
 
 
