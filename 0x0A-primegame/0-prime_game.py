@@ -19,10 +19,16 @@ def sieve(n):
 
 
 def choose_prime(primes):
+    """
+        chooses a prime number randomly
+    """
     return random.choice(primes)
 
 
 def remove_multiples(primes, prime):
+    """
+        removes repetitve vals
+    """
     if prime not in primes:
         return primes
     for i in range(len(primes)):
@@ -32,6 +38,9 @@ def remove_multiples(primes, prime):
 
 
 def isWinner(x, nums):
+    """
+        returns the winner
+    """
     maria_wins = 0
     ben_wins = 0
     for n in nums:
