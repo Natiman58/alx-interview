@@ -27,13 +27,13 @@ def choose_prime(primes):
 
 def remove_multiples(primes, prime):
     """
-        removes repetitve vals
+        removes repetitive values
     """
     if prime not in primes:
         return primes
     for i in range(len(primes)):
         if primes[i] % prime == 0:
-            primes[i] = 0
+            primes[i] = False
     return [p for p in primes if p != 0]
 
 
@@ -43,6 +43,7 @@ def isWinner(x, nums):
     """
     maria_wins = 0
     ben_wins = 0
+    games_played = 0
     for n in nums:
         primes = sieve(n)
         maria_turn = True
@@ -50,19 +51,17 @@ def isWinner(x, nums):
             if maria_turn:
                 prime = choose_prime(primes)
                 maria_turn = False
-                # print("Maria chooses:", prime)
             else:
                 prime = choose_prime(primes)
                 maria_turn = True
-                # print("Ben chooses:", prime)
             primes = remove_multiples(primes, prime)
-            # print("Current state:", primes)
         if maria_turn:
             ben_wins += 1
-            # print("Ben wins!")
         else:
             maria_wins += 1
-            # print("Maria wins!")
+        games_played += 1
+        if games_played == x:  # stop playing after x games
+            break
     if maria_wins > ben_wins:
         return "Maria"
     elif ben_wins > maria_wins:
