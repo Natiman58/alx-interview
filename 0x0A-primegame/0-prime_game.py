@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
     A script that simulates a game of primes
 """
