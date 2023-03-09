@@ -2,7 +2,6 @@
 """
     A script that simulates a game of primes
 """
-
 import random
 
 
