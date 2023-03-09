@@ -2,6 +2,7 @@
     A script that simulates a game of primes
 """
 
+
 def sieve(n):
     """ return prime numbers arrray 'primes' using
         sieve of eratosthenes method
